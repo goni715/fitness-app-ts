@@ -1,14 +1,15 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { TSelectedPage } from "../../shared/types";
 
 type TProps = {
     page: string;
-    selectedPage: string;
-    setSelectedPage: (value: string) => void 
+    selectedPage: TSelectedPage;
+    setSelectedPage: (value: TSelectedPage) => void 
 }
 
 
 const Link = ({ page, selectedPage, setSelectedPage } : TProps) => {
-    const lowerCasePage = page.toLowerCase().replace(/ /g, "") //Our Classes = ourclasses
+    const lowerCasePage = page.toLowerCase().replace(/ /g, "") as TSelectedPage; //Our Classes = ourclasses
 
     return (
         <>
