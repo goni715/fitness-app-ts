@@ -4,7 +4,7 @@ const App = () => {
   return (
     <>
       <h1>Home Page</h1>
-      <About name="Osman Goni"/>
+      <About name="Osman Goni" />
     </>
   );
 };
