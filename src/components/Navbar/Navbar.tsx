@@ -1,12 +1,13 @@
 import { HiMiniBars3 } from "react-icons/hi2";
 import { FaXmark } from "react-icons/fa6";
 import Logo from '../../assets/Logo.png';
+import Link from "./Link";
 
 type TProps = {
-
+    
 }
 
-const Navbar = (props: TProps) => {
+const Navbar = ({ selectedPage, setSelectedPage }: TProps) => {
     const flexBetween = "flex items-center justify-between";
 
     return (
@@ -21,10 +22,10 @@ const Navbar = (props: TProps) => {
                         {/* Right Side */}
                         <div className={`${flexBetween} w-full`}>
                             <div className={`${flexBetween} gap-8 text-sm`}>
-                                <p>Home</p>
-                                <p>Benefits</p>
-                                <p>Our Classes</p>
-                                <p>Contact Us</p>
+                                <Link page="Home"/>Home
+                                <Link page="Benefits"/>
+                                <Link page="Our Classes"/>
+                                <Link page="Contact Us"/>
                             </div>
                             <div className={`${flexBetween} gap-8`}>
                               <p>Sign In</p>

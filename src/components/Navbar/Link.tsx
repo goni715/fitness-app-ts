@@ -1,15 +1,22 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type TProps = {
-    page: string,
-    
+    page: string;
+    selectedPage: string;
+    setSelectedPage: (value: string) => void 
 }
 
 
-const Link = ({ page }) => {
+const Link = ({ page, selectedPage, setSelectedPage } : TProps) => {
+    const lowerCasePage = page.toLowerCase().replace(/ /g, "") //Our Classes = ourclasses
+
     return (
         <>
-            <AnchorLink>
+            <AnchorLink
+             className={`${selectedPage === lowerCasePage ? 'text-primary-500' : ''} transition duration-500 hover:text-primary-300`}
+             href={`#${lowerCasePage}`}
+             onClick={()=> setSelectedPage(lowerCasePage)}
+            >
                 {page}
             </AnchorLink>
         </>
