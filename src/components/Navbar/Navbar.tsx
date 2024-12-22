@@ -3,19 +3,25 @@ import { FaXmark } from "react-icons/fa6";
 import Logo from '../../assets/Logo.png';
 import Link from "./Link";
 import { TSelectedPage } from "../../shared/types";
+import useMediaQuery from "../../hooks/useMediaQuery";
+import { useState } from "react";
 
 type TProps = {
+    isTopOfPage: boolean;
     selectedPage : TSelectedPage;
     setSelectedPage: (value: TSelectedPage) => void
 }
 
-const Navbar = ({ selectedPage, setSelectedPage }: TProps) => {
+const Navbar = ({isTopOfPage, selectedPage, setSelectedPage }: TProps) => {
     const flexBetween = "flex items-center justify-between";
+    const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+    const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
 
     return (
         <>
             <nav>
-                <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
+                <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
                     <div className={`${flexBetween} mx-auto w-5/6`}>
                        <div className={`${flexBetween} w-full gap-16`}>
                         {/* Left Side */}
