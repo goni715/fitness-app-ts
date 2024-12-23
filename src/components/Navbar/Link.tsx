@@ -1,10 +1,11 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { TSelectedPage } from "../../shared/types";
+import { Dispatch, SetStateAction } from "react";
 
 type TProps = {
     page: string;
     selectedPage: TSelectedPage;
-    setSelectedPage: (value: TSelectedPage) => void 
+    setSelectedPage: Dispatch<SetStateAction<TSelectedPage>>
 }
 
 

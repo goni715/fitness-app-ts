@@ -7,10 +7,11 @@ import SponsorFortune from "../../assets/SponsorFortune.png";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import ActionButton from "../../shared/ActionButton";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Dispatch, SetStateAction } from "react";
 
 
 type TProps = {
-  setSelectedPage: (value: TSelectedPage) => void;
+  setSelectedPage: Dispatch<SetStateAction<TSelectedPage>>
 }
 
 

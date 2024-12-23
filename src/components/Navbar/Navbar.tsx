@@ -4,13 +4,13 @@ import Logo from "../../assets/Logo.png";
 import Link from "./Link";
 import { TSelectedPage } from "../../shared/types";
 import useMediaQuery from "../../hooks/useMediaQuery";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import ActionButton from "../../shared/ActionButton";
 
 type TProps = {
   isTopOfPage: boolean;
   selectedPage: TSelectedPage;
-  setSelectedPage: (value: TSelectedPage) => void;
+  setSelectedPage: Dispatch<SetStateAction<TSelectedPage>>
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: TProps) => {

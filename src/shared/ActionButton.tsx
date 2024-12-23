@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { TSelectedPage } from "./types";
 
 type Props = {
   children: React.ReactNode;
-  setSelectedPage: (value: TSelectedPage) => void;
+  setSelectedPage: Dispatch<SetStateAction<TSelectedPage>>
 };
 
 const ActionButton = ({ children, setSelectedPage }: Props) => {
