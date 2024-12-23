@@ -5,6 +5,7 @@ import Link from "./Link";
 import { TSelectedPage } from "../../shared/types";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { useState } from "react";
+import ActionButton from "../../shared/ActionButton";
 
 type TProps = {
   isTopOfPage: boolean;
@@ -56,9 +57,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: TProps) => {
                   </div>
                   <div className={`${flexBetween} gap-8`}>
                     <p>Sign In</p>
-                    {/* <ActionButton setSelectedPage={setSelectedPage}>
+                    <ActionButton setSelectedPage={setSelectedPage}>
                     Become a Member
-                  </ActionButton> */}
+                  </ActionButton> 
                   </div>
                 </div>
               ) : (
