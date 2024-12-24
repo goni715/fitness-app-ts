@@ -3,7 +3,7 @@ import { HiHomeModern, HiAcademicCap } from "react-icons/hi2";
 import { FaUserGroup } from "react-icons/fa6";
 
 
-const benefits: Array<TBenefitType> = [
+export const benefits: Array<TBenefitType> = [
     {
       icon: HiHomeModern,
       title: "State of the Art Facilities",
