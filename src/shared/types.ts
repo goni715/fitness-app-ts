@@ -1,3 +1,4 @@
+import { IconType } from "react-icons";
 
 export enum TSelectedPage {
     Home = 'home',
@@ -6,4 +7,11 @@ export enum TSelectedPage {
     ContactUs = 'contactus'
   }
   
+
+  
+export interface TBenefitType {
+  icon: IconType;
+  title: string;
+  description: string;
+}
   
