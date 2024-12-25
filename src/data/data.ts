@@ -1,12 +1,12 @@
-import { TBenefitType } from "../shared/types";
+import { TBenefitType, TClassType } from "../shared/types";
 import { HiHomeModern, HiAcademicCap } from "react-icons/hi2";
 import { FaUserGroup } from "react-icons/fa6";
-import image1 from "@/assets/image1.png";
-import image2 from "@/assets/image2.png";
-import image3 from "@/assets/image3.png";
-import image4 from "@/assets/image4.png";
-import image5 from "@/assets/image5.png";
-import image6 from "@/assets/image6.png";
+import image1 from "../assets/image1.png";
+import image2 from "../assets/image2.png";
+import image3 from "../assets/image3.png";
+import image4 from "../assets/image4.png";
+import image5 from "../assets/image5.png";
+import image6 from "../assets/image6.png";
 
 export const benefits: Array<TBenefitType> = [
     {
@@ -30,7 +30,7 @@ export const benefits: Array<TBenefitType> = [
   ];
 
 
-  const classes: Array<ClassType> = [
+  export const classes: Array<TClassType> = [
     {
       name: "Weight Training Classes",
       description:
