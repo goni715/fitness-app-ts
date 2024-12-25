@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { TSelectedPage } from "./shared/types";
 import Home from "./components/Home/Home";
 import Benefits from "./components/Benefits/Benefits";
+import OurClasses from "./components/OurClasses/OurClasses";
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
         <Home setSelectedPage={setSelectedPage} />
         <Benefits setSelectedPage={setSelectedPage}/>
+        <OurClasses setSelectedPage={setSelectedPage}/>
       </div>
     </>
   );
