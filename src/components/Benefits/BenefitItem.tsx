@@ -30,7 +30,7 @@ const BenefitItem = ({item, setSelectedPage}: TProps) => {
         >
           <div className="mb-4 flex justify-center">
             <div className="rounded-full border-2 border-gray-100 bg-primary-100 p-4">
-              <item.icon />
+              <item.icon className="h-6 w-6"/>
             </div>
           </div>
 
