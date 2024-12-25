@@ -14,4 +14,12 @@ export interface TBenefitType {
   title: string;
   description: string;
 }
+
+
+export interface TClassType {
+  name: string;
+  description?: string;
+  image: string;
+}
+
   
