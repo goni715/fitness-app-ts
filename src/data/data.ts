@@ -64,3 +64,5 @@ export const benefits: Array<TBenefitType> = [
       image: image6,
     },
   ];
+
+
